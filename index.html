@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhanushkumar D – Learning & Organizational Development Lead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFFFF; --card:#FFFFFF; --card2:#FFFFFF; --deep:#67ced5; --line:rgba(103,206,213,.7);
+  --text:#0D1A2B; --muted:#2F4A5E; --ice:#0D1A2B; --gold:#67ced5;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif; --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  color-scheme:light; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.4rem}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3rem);margin-bottom:2rem}
+h2::after{content:"";display:block;width:56px;height:3px;margin-top:.8rem;background:var(--gold);border-radius:3px}
+section{padding:4.5rem 0;content-visibility:auto;contain-intrinsic-size:auto 700px}
+
+nav{position:sticky;top:0;z-index:10;background:var(--deep);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:3.6rem}
+nav b{font-family:var(--serif);font-size:1.15rem}
+nav div{display:flex;gap:1.3rem;align-items:center;font-size:.9rem}
+nav a{text-decoration:none;font-weight:600}
+nav .go{background:#fff;color:var(--text);padding:.45rem 1.1rem;border-radius:999px}
+@media(max-width:640px){nav .l{display:none}}
+
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.btn{padding:.9rem 1.6rem;border-radius:999px;text-decoration:none;font-weight:700;font-size:.95rem;border:1px solid var(--gold);transition:transform .2s,background .2s}
+.btn.pri{background:var(--gold);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.btn:not(.pri):hover{background:rgba(103,206,213,.15)}
+
+.hero{padding:4.5rem 0 3.5rem;background:var(--deep)}
+.hgrid{display:grid;grid-template-columns:1.35fr .85fr;gap:3rem;align-items:center}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr}}
+.tag{display:inline-block;padding:.4rem 1rem;border:1px solid var(--line);border-radius:999px;background:var(--card2);font-size:.88rem;margin-bottom:1.4rem}
+.hero h1{font-size:clamp(3rem,9vw,6rem);letter-spacing:-.02em}
+.role{font-family:var(--serif);font-size:clamp(1.2rem,2.6vw,1.65rem);margin:1.1rem 0 .4rem;color:var(--ice)}
+.rot{margin:0 0 1rem}
+.rot b{display:inline-block;border-bottom:2px solid var(--gold);transition:opacity .35s}
+.rot b.out{opacity:0}
+.sum{max-width:54ch;color:var(--muted)}
+.up{animation:up .8s both}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.d2{animation-delay:.1s}.d3{animation-delay:.2s}.d4{animation-delay:.3s}.d5{animation-delay:.4s}.d6{animation-delay:.5s}
+
+.profile{padding:2rem;border-radius:26px;background:var(--card);border:1px solid var(--line);text-align:center;animation-delay:.3s}
+.avatar{width:150px;height:150px;margin:0 auto 1.2rem;border-radius:50%;padding:10px}
+.face{width:100%;height:100%;border-radius:50%;background:var(--deep);display:grid;place-items:center;font:600 2.6rem var(--serif);overflow:hidden}
+.face img{width:100%;height:100%;object-fit:cover}
+.profile h3{font-size:1.3rem}
+.profile p{margin:.2rem 0 1.2rem;color:var(--muted);font-size:.93rem}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.mini div{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:.7rem}
+.mini strong{display:block;font:600 1.5rem/1.1 var(--serif)}
+.mini span{font-size:.78rem;color:var(--muted)}
+
+.strip{background:var(--deep);border-block:1px solid var(--line);padding:1.1rem 0}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;justify-content:center;font-family:var(--serif);font-size:1.05rem}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.stat,.step,.job,.card,.sk>div,.info>div{background:var(--card);border:1px solid var(--line);border-radius:22px}
+.stat{padding:1.5rem}
+.stat strong{color:var(--text);display:block;font:600 clamp(2.2rem,4.5vw,3.1rem)/1 var(--serif)}
+.stat span{font-size:.9rem;color:var(--muted);display:block;margin-top:.5rem}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.step{padding:1.6rem}
+.step .n{font:600 2.6rem/1 var(--serif);color:var(--ice)}
+.step h3{font-size:1.3rem;margin:.7rem 0 .5rem}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+.bar{height:4px;background:rgba(103,206,213,.2);margin-top:1.2rem;border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease .2s}
+.in .bar i{transform:scaleX(1)}
+
+.tl{position:relative;padding-left:2.2rem}
+.tl::before{content:"";position:absolute;left:6px;top:8px;bottom:0;width:2px;background:rgba(103,206,213,.5)}
+.job{position:relative;margin-bottom:1.2rem;padding:1.6rem}
+.job::before{content:"";position:absolute;left:-2.2rem;top:1.9rem;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--gold)}
+.job h3{font-size:1.4rem}
+.meta{color:var(--ice);font-size:.92rem;margin:.3rem 0 .9rem;font-weight:600}
+.job ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.job li{margin-bottom:.45rem;max-width:74ch}
+
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.card{grid-column:span 2;padding:1.7rem;transition:transform .2s,border-color .2s}
+.card.big{grid-column:span 4;background:var(--deep)}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card h3{font-size:1.35rem;margin-bottom:.6rem}
+.card p{margin:0;color:var(--muted)}
+.ic{width:44px;height:44px;border-radius:12px;background:rgba(103,206,213,.16);display:grid;place-items:center;margin-bottom:1rem;font-size:1.3rem}
+@media(max-width:800px){.card,.card.big{grid-column:span 6}}
+
+.sk,.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.sk>div,.info>div{padding:1.5rem}
+.info{margin-top:1rem}
+.sk h3,.info h3{font-size:1.15rem;margin-bottom:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chips span,.int span{border:1px solid var(--line);background:var(--card2);padding:.3rem .8rem;border-radius:999px;font-size:.85rem}
+.int{display:flex;flex-wrap:wrap;gap:.7rem}
+.int span{padding:.7rem 1.2rem;font-size:.95rem;background:var(--card)}
+.info p,.info li{color:var(--muted);margin:.2rem 0;font-size:.95rem}
+.info ul{margin:0;padding-left:1.1rem}
+
+.cta{text-align:center;padding:3.5rem 1.5rem;border-radius:30px;background:var(--deep);border:1px solid var(--line)}
+.cta h2{margin:0 auto 1rem;max-width:16ch}
+.cta h2::after{margin:.8rem auto 0}
+.cta p{color:var(--muted);margin:0 auto;max-width:50ch}
+.cta .btns{justify-content:center}
+.hero .btn.pri,.cta .btn.pri{background:#fff;color:var(--text);border-color:#fff}
+.hero .btn:not(.pri),.cta .btn:not(.pri){border-color:var(--text);color:var(--text)}
+.hero .btn:not(.pri):hover,.cta .btn:not(.pri):hover{background:rgba(255,255,255,.4)}
+.hero .rot b{border-color:#fff}
+.hero .sum,.cta p{color:var(--text)}
+#approach,#skills{background:var(--deep)}
+#approach h2::after,#skills h2::after,.cta h2::after{background:#fff}
+.tag::before{background:var(--deep)}
+html{scroll-behavior:smooth}
+/* Glossy embossed glass ribbon */
+nav{position:fixed;left:0;right:0;top:0;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.55) 0%,rgba(255,255,255,.18) 48%,rgba(103,206,213,.35) 100%);-webkit-backdrop-filter:blur(18px) saturate(170%);backdrop-filter:blur(18px) saturate(170%);border-bottom:1px solid rgba(255,255,255,.75);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 3px rgba(13,26,43,.10),0 10px 30px rgba(13,26,43,.16);animation:drop .9s cubic-bezier(.2,.9,.3,1) both;transition:box-shadow .3s}
+nav::before{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0));pointer-events:none}
+nav::after{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:translateX(-120%) skewX(-20deg);animation:sheen 7s ease-in-out 1.5s infinite;pointer-events:none}
+@keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}35%,100%{transform:translateX(480%) skewX(-20deg)}}
+@keyframes drop{from{opacity:0;transform:translateY(-100%)}to{opacity:1;transform:none}}
+nav .wrap{position:relative;z-index:1;transition:height .3s}
+nav.sc .wrap{height:3rem}
+nav.sc{box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -2px 3px rgba(13,26,43,.12),0 14px 34px rgba(13,26,43,.22)}
+nav b{text-shadow:0 1px 0 rgba(255,255,255,.9),0 -1px 0 rgba(13,26,43,.12)}
+nav a{position:relative;padding:.4rem .8rem;border-radius:999px;text-shadow:0 1px 0 rgba(255,255,255,.8);transition:background .25s,box-shadow .25s,transform .25s}
+nav a.l:hover{background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.25));box-shadow:inset 0 1px 0 #fff,inset 0 -1px 2px rgba(13,26,43,.12),0 3px 8px rgba(13,26,43,.12);transform:translateY(-1px)}
+nav .go{padding:.5rem 1.3rem;background:linear-gradient(180deg,#fff 0%,#EAF9FA 55%,#fff 100%);box-shadow:inset 0 1px 0 #fff,inset 0 -3px 4px rgba(103,206,213,.45),0 4px 12px rgba(13,26,43,.2);text-shadow:none}
+nav .go:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 #fff,inset 0 -3px 4px rgba(103,206,213,.55),0 8px 18px rgba(13,26,43,.26)}
+.hero{position:relative;overflow:hidden;padding-top:calc(4.5rem + 3.6rem)}
+.hero .wrap{position:relative;z-index:1}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.75),rgba(255,255,255,0) 70%);will-change:transform;pointer-events:none}
+.hero::before{width:520px;height:520px;left:-120px;top:-80px;animation:drift 14s ease-in-out infinite alternate}
+.hero::after{width:620px;height:620px;right:-160px;bottom:-220px;animation:drift 18s ease-in-out infinite alternate-reverse}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.15)}}
+.stat,.step,.job,.card,.sk>div,.info>div{box-shadow:inset 0 1px 0 #fff,0 12px 32px rgba(13,26,43,.09);transition:transform .3s,box-shadow .3s,border-color .3s}
+.stat,.step,.card{position:relative;overflow:hidden}
+.stat::after,.step::after,.card::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(103,206,213,.45),transparent);transform:skewX(-20deg);transition:left .9s;pointer-events:none}
+.stat:hover::after,.step:hover::after,.card:hover::after{left:140%}
+.stat:hover,.step:hover,.sk>div:hover,.info>div:hover{transform:translateY(-5px);box-shadow:inset 0 1px 0 #fff,0 18px 40px rgba(13,26,43,.16)}
+.btn{box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 6px 16px rgba(13,26,43,.14)}
+.btn:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.8),0 12px 24px rgba(13,26,43,.22)}
+.profile{box-shadow:inset 0 1px 0 #fff,0 24px 60px rgba(13,26,43,.22)}
+footer{padding:2rem 0 3rem;text-align:center;color:var(--muted);font-size:.85rem}
+
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.job.rv{transform:translateX(-28px)}.job.rv.in{transform:none}
+.card.rv,.step.rv,.stat.rv{transform:translateY(20px) scale(.96)}
+.card.rv.in,.step.rv.in,.stat.rv.in{transform:none}
+.tl::before{transform:scaleY(0);transform-origin:top;transition:transform 1.6s ease}
+.tl.in::before{transform:none}
+.job::before{transform:scale(0);transition:transform .45s cubic-bezier(.3,1.6,.5,1) .35s}
+.job.in::before{transform:none}
+h2::after{transform:scaleX(0);transform-origin:left;transition:transform .8s ease .3s}
+h2.in::after,.cta.in h2::after{transform:none}
+.in .chips span{animation:pop .5s both}
+.chips span:nth-child(2){animation-delay:.08s!important}.chips span:nth-child(3){animation-delay:.16s!important}.chips span:nth-child(4){animation-delay:.24s!important}.chips span:nth-child(5){animation-delay:.32s!important}.chips span:nth-child(6){animation-delay:.4s!important}.chips span:nth-child(7){animation-delay:.48s!important}.chips span:nth-child(8){animation-delay:.56s!important}
+@keyframes pop{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:none}}
+.ic{transition:transform .25s}.card:hover .ic{transform:rotate(-8deg) scale(1.12)}
+.tag::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-right:.6rem;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3;transform:scale(.7)}}
+.avatar{position:relative}
+.avatar::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px dashed var(--gold);animation:spin 30s linear infinite;will-change:transform}
+@keyframes spin{to{transform:rotate(360deg)}}
+.profile{position:relative}
+.float{position:absolute;right:.9rem;top:-1.1rem;background:var(--gold);color:var(--bg);padding:.45rem .9rem;border-radius:12px;font-weight:700;font-size:.8rem;will-change:transform;animation:bob 4s ease-in-out infinite}
+.float em{font:600 1.05rem var(--serif);font-style:normal;margin-right:.3rem}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.strip{overflow:hidden}
+.track{display:flex;width:max-content;will-change:transform;animation:scroll 40s linear infinite;font-family:var(--serif);font-size:1.1rem}
+.track span{display:flex;align-items:center;gap:2.4rem;padding-right:2.4rem;white-space:nowrap}
+.track span::after{content:"✦";color:#fff;font-size:.7rem}
+.track.paused{animation-play-state:paused}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.sp{display:none}
+@supports(animation-timeline:scroll()){.sp{display:block;position:fixed;top:0;left:0;right:0;height:3px;background:var(--text);transform-origin:left;transform:scaleX(0);animation:grow linear both;animation-timeline:scroll();z-index:20}}
+@keyframes grow{to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.job.rv,.card.rv,.step.rv,.stat.rv{opacity:1;transform:none}.bar i,.tl::before,h2::after,.job::before{transform:none!important}.sp{display:none!important}}
+</style>
+</head>
+<body>
+<div class="sp"></div>
+<nav><div class="wrap"><b>Dhanushkumar D</b><div><a class="l" href="#approach">Approach</a><a class="l" href="#journey">Journey</a><a class="l" href="#work">Projects</a><a class="l" href="#skills">Skills</a><a class="go" href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap hgrid">
+  <div>
+    <div class="tag up">Manufacturing Excellence · Workforce Capability</div>
+    <h1 class="up d2">Dhanushkumar D</h1>
+    <p class="role up d3">Learning & Organizational Development Lead</p>
+    <p class="rot up d4">Specialising in <b id="rot">Competency Frameworks</b></p>
+    <p class="sum up d5">I build the systems that turn factory-floor skills into lasting capability: competency frameworks, technical academies, operator certification, and learning that shows up in productivity and quality.</p>
+    <div class="btns up d6"><a class="btn pri" href="#contact">Get in touch</a><a class="btn" href="#work">View projects</a></div>
+  </div>
+  <div class="profile up">
+    <div class="avatar"><div class="face">DD</div></div>
+    <h3>Dhanushkumar D</h3>
+    <p>Krishnagiri, Tamil Nadu, India</p>
+    <div class="mini"><div><strong>3.8+</strong><span>years in L&D</span></div><div><strong>5</strong><span>plants supported</span></div><div><strong>32+</strong><span>programs delivered</span></div><div><strong>93%</strong><span>training compliance</span></div></div>
+  </div>
+</div></header>
+
+<div class="strip" aria-hidden="true"><div class="track" id="track"><span>Competency Frameworks</span><span>Technical Academy</span><span>Line-side Dojo</span><span>Operator Certification</span><span>VR Training</span><span>Training MIS</span><span>Kirkpatrick Model</span></div></div>
+
+<section><div class="wrap"><div class="stats">
+  <div class="stat rv"><strong data-n="3.8" data-d="1" data-s="+">0</strong><span>years in manufacturing L&D</span></div>
+  <div class="stat rv"><strong data-n="5000" data-s="+">0</strong><span>employees supported</span></div>
+  <div class="stat rv"><strong data-n="5">0</strong><span>manufacturing units</span></div>
+  <div class="stat rv"><strong data-n="32" data-s="+">0</strong><span>training programs delivered</span></div>
+  <div class="stat rv"><strong data-n="93" data-s="%">0</strong><span>compliance, up from 82%</span></div>
+</div></div></section>
+
+<section id="approach"><div class="wrap">
+  <h2 class="rv">How I build capability</h2>
+  <div class="steps">
+    <div class="step rv" style="--w:25%"><div class="n">1</div><h3>Identify</h3><p>Training Need Identification and skill-gap reviews with HODs.</p><div class="bar"><i></i></div></div>
+    <div class="step rv" style="--w:50%"><div class="n">2</div><h3>Design</h3><p>Competency frameworks, skill matrices, SOPs and digital content.</p><div class="bar"><i></i></div></div>
+    <div class="step rv" style="--w:75%"><div class="n">3</div><h3>Deliver</h3><p>Skill Training Centre, Line-side Dojo, VR modules and operator certification.</p><div class="bar"><i></i></div></div>
+    <div class="step rv" style="--w:100%"><div class="n">4</div><h3>Measure</h3><p>Kirkpatrick Model and Training MIS dashboards. Compliance rose from 82% to 93%.</p><div class="bar"><i></i></div></div>
+  </div>
+</div></section>
+
+<section id="journey"><div class="wrap">
+  <h2 class="rv">Career journey</h2>
+  <div class="tl">
+    <div class="job rv"><h3>L&D Lead, HR Learning & Development</h3><div class="meta">Mplastics Toys and Engineering Pvt Ltd · Mar 2025 to present</div>
+      <ul><li>Lead learning across 5 manufacturing units for 5,000+ employees, aligned with business goals.</li>
+      <li>Run the Annual Training Calendar: 32+ programs with 95%+ completion compliance.</li>
+      <li>Designed competency frameworks and skill matrices with HODs to close skill gaps.</li>
+      <li>Raised training compliance from 82% to 93% through Training MIS and KPI dashboards.</li>
+      <li>Built an Employee Engagement & Pulse Survey Framework; measure impact with the Kirkpatrick Model.</li></ul></div>
+    <div class="job rv"><h3>HRD Trainee</h3><div class="meta">TVS Motor Company Ltd · Jun 2023 to Mar 2025</div>
+      <ul><li>Developed Line-side Dojo learning systems to strengthen operator capability and production readiness.</li>
+      <li>Designed VR-based training so employees learn new products and assembly before the line.</li>
+      <li>Ran Training Need Identification, NPI training and effectiveness evaluations.</li>
+      <li>Contributed to Makerspace innovation projects.</li></ul></div>
+    <div class="job rv"><h3>Team Member, Manufacturing Quality</h3><div class="meta">IM Gears Pvt Ltd · Jul 2022 to Dec 2022</div>
+      <ul><li>Performed in-process and final inspections; supported root cause analysis and corrective actions.</li></ul></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <h2 class="rv">Key projects</h2>
+  <div class="bento">
+    <div class="card big rv"><h3>Skill Training Centre</h3><p>A structured home for workforce capability development, built to take operators from basic skills to certified competence.</p></div>
+    <div class="card rv"><h3>Line-side Dojo</h3><p>Hands-on practice at the line that lifts operator capability and readiness.</p></div>
+    <div class="card rv"><h3>Operator Certification</h3><p>A clear, assessed path that proves operator skill.</p></div>
+    <div class="card rv"><h3>VR Training Modules</h3><p>Immersive new-product practice before deployment.</p></div>
+    <div class="card rv"><h3>Makerspace Projects</h3><p>Prototype and process-improvement work.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2 class="rv">Skills & tools</h2>
+  <div class="sk">
+    <div class="rv"><h3>Learning design</h3><div class="chips"><span>Training Need Identification</span><span>Instructional Design</span><span>SOP Development</span><span>Content Development</span><span>Assessments</span></div></div>
+    <div class="rv"><h3>Capability systems</h3><div class="chips"><span>Competency Frameworks</span><span>Skill Mapping</span><span>Technical Academy</span><span>Operator Certification</span><span>Annual Training Calendar</span></div></div>
+    <div class="rv"><h3>Analytics & digital</h3><div class="chips"><span>Training MIS</span><span>Power BI</span><span>LMS</span><span>Kirkpatrick Model</span><span>Pulse Surveys</span><span>Google Apps Script</span><span>VR</span><span>IIoT</span></div></div>
+    <div class="rv"><h3>Manufacturing excellence</h3><div class="chips"><span>Lean</span><span>Kaizen</span><span>5S</span><span>NPI</span><span>Excel</span><span>PowerPoint</span></div></div>
+  </div>
+  <div class="info">
+    <div class="rv"><h3>Education</h3><p>Diploma in Mechanical Engineering<br>Sri Vinayaga Polytechnic College, 2022 · 86%</p></div>
+    <div class="rv"><h3>Certifications</h3><ul><li>Diploma in Computer Application</li><li>Basics of Artificial Intelligence</li><li>Fire & Safety</li></ul></div>
+    <div class="rv"><h3>Languages</h3><p>English (professional), Tamil (native), Hindi and Kannada (beginner)</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="rv">Beyond work</h2>
+  <div class="int rv"><span>Videography & photography</span><span>Photo & video editing</span><span>Travelling & exploring new places</span><span>Singing & dancing</span><span>Generating innovative ideas</span><span>Learning AI & digital technologies</span></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><div class="cta rv">
+  <h2>Let’s build your team’s capability.</h2>
+  <p>Open to conversations about learning, capability and organizational development in manufacturing.</p>
+  <div class="btns">
+    <a class="btn pri" href="mailto:mrddhanush01@gmail.com">Email me</a>
+    <a class="btn" href="tel:+916383633183">+91 63836 33183</a>
+    <a class="btn" href="https://www.linkedin.com/in/dhanushkumar-d-a41222305?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></div></section>
+<footer>© 2026 Dhanushkumar D · Krishnagiri, Tamil Nadu</footer>
+
+<script>
+(function(){
+  if('scrollRestoration' in history)history.scrollRestoration='manual';
+  if(location.hash)history.replaceState(null,'',location.pathname+location.search);
+  window.scrollTo(0,0);
+  addEventListener('pageshow',function(){window.scrollTo(0,0)});
+  var nv=document.querySelector('nav');
+  function sc(){nv.classList.toggle('sc',scrollY>20)}
+  addEventListener('scroll',sc,{passive:true});sc();
+  var tr=document.getElementById('track');tr.innerHTML+=tr.innerHTML;
+  new IntersectionObserver(function(x){tr.classList.toggle('paused',!x[0].isIntersecting)}).observe(tr);
+  function fmt(v,d){return v.toFixed(d).replace(/\B(?=(\d{3})+(?!\d))/g,',')}
+  function count(el){
+    var to=parseFloat(el.dataset.n),d=+el.dataset.d||0,s=el.dataset.s||'',t0=null;
+    if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=fmt(to,d)+s;return}
+    function f(t){t0=t0||t;var p=Math.min((t-t0)/1200,1);
+      el.textContent=fmt(to*(1-Math.pow(1-p,3)),d)+(p===1?s:'');if(p<1)requestAnimationFrame(f)}
+    requestAnimationFrame(f);
+  }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return;var t=e.target,i=Array.prototype.indexOf.call(t.parentNode.children,t);t.style.transitionDelay=(i%5*.08)+'s';setTimeout(function(){t.style.transitionDelay=''},1300);t.classList.add('in');io.unobserve(t);
+    e.target.querySelectorAll('[data-n]').forEach(count);
+  })},{threshold:.1});
+  document.querySelectorAll('.rv,.tl').forEach(function(el){io.observe(el)});
+  var words=['Competency Frameworks','Technical Academies','Operator Certification','VR-based Training','Training Analytics','Employee Engagement'],wi=0,rot=document.getElementById('rot');
+  setInterval(function(){rot.classList.add('out');setTimeout(function(){wi=(wi+1)%words.length;rot.textContent=words[wi];rot.classList.remove('out')},350)},3000);
+})();
+</script>
+</body>
+</html>
